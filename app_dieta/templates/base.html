@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt">
+{% load static %}
+<head>
+
+  <meta charset="UTF-8">
+  <title>Controle de Dieta </title>
+
+    <link href= {% static 'css/aplication.css' %} rel="stylesheet" >
+    <script src = {% static 'js/myaplication.js' %} > </script>
+</head>
+
+<body>
+  <header>
+    <h2> Controle de Dieta </h2>
+
+    <div class="link">
+      <a href = "#"> Dashboard </a> |
+      <a href = "/accounts/login/"> Dieta </a>
+    </div>
+  </header>
+   {% if user.is_authenticated %}
+        <h1> AUTENTICADO </h1>
+   {% else %}
+        <h1> NAO AUTENTICADO </h1>
+   {% endif %}
+
+</body>
+</html>

@@ -1,0 +1,95 @@
+body {
+    width: 100%;
+    margin: 0px;
+    /**background: url(img/cvj7.jpg) center; **/
+    font-family: sans-serif;
+    background-color: #F5F5F5;
+}
+
+
+header{
+    width: 100%;
+    background-color:#00FA9A;                     /** cor de fundo **/
+    height: 130px;
+    font-size: 16px;
+}
+
+header h2{
+    font-size: 25px;
+    text-align: center;
+    padding: 10px 0px 0px 0px;
+}
+
+header .link{
+    font-size: 19px;
+    padding: 35px 0px 0px 10px;
+}
+
+.telaLogin{
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    color: blue;
+    text-shadow: 2px 2px 2px white;
+    position: absolute;
+    top: 192px;
+    left: 00px;
+    list-style: none;
+    text-decoration: none;
+   /** border: 1px outset rgba(255,255,255); **/
+
+    height: 100% ;                          /** altura do bloco **/
+    width: 100%;
+    margin: auto;
+    background-color: white;
+
+}
+
+
+.telaLogin a#naoTenhoCadastro{
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #0000FF;
+    text-shadow: 5px 5px 5px white;
+    position: absolute;
+    top: 190px;
+    left: 533px;
+
+    padding: 10px 10px 10px 27px;   /*  acima    50px  padding  */
+                                /*  direita  0px  padding  */
+                                /*  abaixo   00px padding  */
+                                /*  esquerda 30px  padding  */
+}
+.telaLogin a#naoTenhoCadastro:hover{  /** muda de cor qdo o cursor passa **/
+    color: #1E90FF;
+}
+
+.telaLogin form{
+    height: 22% ;                          /** altura do bloco **/
+    width: 35%;
+    margin: auto;
+    background-color: #DCDCDC;
+    border: 12px solid #D3D3D3;
+    padding: 40px 0px 0px 150px;   /*  acima    50px  padding  */
+                                /*  direita  0px  padding  */
+                                /*  abaixo   00px padding  */
+                                /*  esquerda 30px  padding  */
+    margin-top: 40px                    /** margem de cima **/
+
+
+}
+.botaoEntrar{
+
+    height: 0% ;                          /** altura do bloco **/
+    width: 68%;
+    margin: auto;
+    padding: 0px 0px 0px 0px;   /*  acima    50px  padding  */
+                                /*  direita  0px  padding  */
+                                /*  abaixo   00px padding  */
+                                /*  esquerda 30px  padding  */
+    margin-top: 10px;
+
+
+}
+/** --------------------------------------------------------**/
+
+
