@@ -41,14 +41,14 @@
     }
 
 
-    .telaLogin a#naoTenhoCadastro{
+    .telaLogin a#nao-tenho-cadastro{
         font-family: Arial, sans-serif;
         font-size: 16px;
         color: #0000FF;
         text-shadow: 5px 5px 5px white;
         position: absolute;
         top: 190px;
-        left: 533px;
+        left: 530px;
 
         padding: 10px 10px 10px 27px;   /*  acima    50px  padding  */
                                 /*  direita  0px  padding  */
@@ -125,14 +125,14 @@
                 </tr>
         </table>
         <div class="botaoEntrar">
-            <input type="submit" value="ACESSAR SUA CONTA">
+            <input type="submit" value="ACESSAR CONTA">
         </div>
 
         <input type="hidden" name="next" value="{{ next }}">
     </form>
 
 
-    <a id="naoTenhoCadastro" href = " ">
+    <a id="nao-tenho-cadastro" href = "{% url 'TelaCadastroUsuario' %}">
                     Não tenho cadastro
     </a>
 

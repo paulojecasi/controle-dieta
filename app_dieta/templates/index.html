@@ -2,13 +2,19 @@
 
 {% block main %}
 
+    <!-- se o usuario não estiver autenticado, mostrara as opções de acessar
+         sua conta, ou fazer um cadastro -->
     {% if user.is_authenticated %}
         <h1> AUTENTICADO </h1>
     {% else %}
 
       <div id="bt-acesso" class = "col-sm-12" >
-        <a id="bt-minha-conta" href="/accounts/login/">  Acessar minha conta  </a>
-        <a id="bt-sem-cadastro" href="#">  Nao tenho cadastro   </a>
+        <a id="bt-minha-conta" href="/accounts/login/">
+            Acessar minha conta
+        </a>
+        <a id="bt-sem-cadastro" href="{% url 'TelaCadastroUsuario' %}">
+            Nao tenho cadastro
+        </a>
       </div>
 
     {% endif %}

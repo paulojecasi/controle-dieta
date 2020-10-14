@@ -29,6 +29,11 @@ header .link{
     padding: 30px 0px 0px 10px;
 }
 
+header #ola-usuario{
+    font-size: 19px;
+    padding: 0px 0px 0px 800px;
+}
+
 #bt-acesso {
     width: 100%;
     height: 300px;
@@ -62,6 +67,148 @@ header .link{
     display: inline-block;
     margin: 4px 2px;
     cursor: pointer;
+}
+
+
+
+/** --------------------- CADASTRO DE USUARIOS ------------------------**/
+
+.form-cadastro-usuario{
+
+    /** border: 1px outset rgba(255,255,255);    /** borda e cor da borda **/
+
+    height: 430px ;                             /** altura do bloco **/
+    width: 100%;                                /** largura **/
+
+    font-size: 18px;                          /** tamanho da fonte **/
+    font-weight: bold;                        /** fonte em negrito **/
+    color: black;                            /** cor da fonte **/
+    text-decoration: none;
+    list-style: none;
+
+    padding: 0px 0px 0px 0px;  /*  acima    50px  padding  */
+                                /*  direita  0px  padding  */
+                                /*  abaixo   00px padding  */
+                                /*  esquerda 30px  padding  */
+
+    /** background: url(img/carrogrande.png) center no-repeat; **/
+    /** background: url(img/carrogrande.png) center; **/
+    background-size: 150px 150px;
+    background-color: #C0C0C0;                     /** cor de fundo **/
+    border-radius: 0px 0px 0px 0px ;         /** arredondamento da borda **/
+
+}
+
+.form-cadastro-usuario h2#cabecalho-cad-usuario{
+    font-family: Arial, sans-serif;
+    font-size: 33px;
+    color: rgba(255,255,255);
+    text-shadow: 2px 2px 2px rgba(0,0,0,.6);
+    text-align: left;
+}
+
+.fields-suario{
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    color: black;
+    line-height:40px;                          /** espaço entre as linhas **/
+
+
+}
+
+.fields-suario div input{
+    font-family: Arial, sans-serif;
+    font-size: 17px;
+    background-color: #fffccc;
+    box-shadow: 1px 1px 2px #333333;
+    height: 25px;                            /** altuta **/
+    text-transform: uppercase;
+}
+
+.fields-suario div#email-us{
+    padding-left:90px;                      /** espaço da borda e texto a esquerda **/
+
+}
+.fields-suario div input#email{
+    width:600px   ;                 /* tamanho do campo */
+    text-transform: none;
+}
+
+.fields-suario div#senha-us{
+    padding-left:84px;                      /** espaço da borda e texto a esquerda **/
+    text-transform: none;
+}
+.fields-suario div input#senha{
+    width:200px   ;                 /* tamanho do campo */
+    text-transform: none;
+}
+
+.fields-suario div#confsenha-us{
+    padding-left:0px;                      /** espaço da borda e texto a esquerda **/
+}
+.fields-suario div input#confsenha{
+    width:200px   ;                 /* tamanho do campo */
+    text-transform: none;
+}
+.fields-suario div#primeiro-nome{
+    padding-left:12px;                      /** espaço da borda e texto a esquerda **/
+}
+.fields-suario div input#primeiro_nome{
+    width:300px  ;                  /* tamanho do campo */
+}
+.fields-suario div#sobre-nome{
+    padding-left:34px;                      /** espaço da borda e texto a esquerda **/
+
+}
+.fields-suario div input#sobre_nome{
+    width:300px  ;                  /* tamanho do campo */
+}
+
+.form-cadastro-usuario button {
+
+    padding:8px;
+    text-decoration: none;
+    text-align:center;
+    width:135px;
+    height:40px;
+    display:inline-block;
+    border-radius: 3px;
+    position:absolute;
+    right: 600px;
+    bottom:100px;
+    box-shadow: 1px 1px 0 1px #363636;
+
+
+}
+
+.form-cadastro-usuario button#cadastrar {
+    color: white;
+    background-color: #1E90FF;                  /** cor de fundo **/
+    font: bold 16px/24px arial, helvetica, sans-aerif;
+    text-shadow: 2px 2px 2px black;
+
+}
+
+.form-cadastro-usuario button#alterar {
+    color: white;
+    background-color: #FFD700;                     /** cor de fundo **/
+    font: bold 16px/24px arial, helvetica, sans-aerif;
+    text-shadow: 2px 2px 2px black;
+
+
+}
+
+.form-cadastro-usuario a#ir-cadastro-cliente {
+
+    position:absolute;
+    right: 200px;
+    bottom: 100px;
+
+
+    color: blue;
+    font: bold 21px/25px arial, helvetica, sans-aerif;
+    text-shadow: 2px 2px 2px white;
+
 }
 
 
