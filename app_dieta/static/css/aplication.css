@@ -9,22 +9,81 @@ body {
 
 header{
     width: 100%;
-    background-color:#00FA9A;                     /** cor de fundo **/
+    background-color:#87CEFA;                     /** cor de fundo **/
     height: 130px;
     font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+
 }
 
 header h2{
     font-size: 25px;
     text-align: center;
-    padding: 10px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
 }
 
 header .link{
     font-size: 19px;
-    padding: 35px 0px 0px 10px;
+    padding: 30px 0px 0px 10px;
 }
 
+#bt-acesso {
+    width: 100%;
+    height: 300px;
+    font-size: 22px;
+    /**padding: 60px 0px 0px 300px; **/
+
+    justify-content: center;
+
+
+}
+
+#bt-acesso #bt-minha-conta {
+    background-color: #00BFFF;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+#bt-acesso #bt-sem-cadastro {
+    background-color: #4682B4;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+
+
+.telaLogin{
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    color: blue;
+    text-shadow: 2px 2px 2px white;
+    position: absolute;
+    top: 192px;
+    left: 00px;
+    list-style: none;
+    text-decoration: none;
+   /** border: 1px outset rgba(255,255,255); **/
+
+    height: 100% ;                          /** altura do bloco **/
+    width: 100%;
+    margin: auto;
+    background-color: white;
+
+}
 .telaLogin{
     font-family: Arial, sans-serif;
     font-size: 20px;
@@ -90,6 +149,6 @@ header .link{
 
 
 }
-/** --------------------------------------------------------**/
+
 
 

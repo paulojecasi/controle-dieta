@@ -1,8 +1,23 @@
 {% extends 'base.html' %}
 
-
 {% block main %}
+
+    {% if user.is_authenticated %}
+        <h1> AUTENTICADO </h1>
+    {% else %}
+
+      <div id="bt-acesso" class = "col-sm-12" >
+        <a id="bt-minha-conta" href="/accounts/login/">  Acessar minha conta  </a>
+        <a id="bt-sem-cadastro" href="#">  Nao tenho cadastro   </a>
+      </div>
+
+    {% endif %}
+
 
 
 
 {% endblock %}
+
+
+
+

@@ -11,19 +11,25 @@
 </head>
 
 <body>
-  <header>
-    <h2> Controle de Dieta </h2>
+  <div class="container-fluid">
+    <div class="row">
+      <header class="col-sm-12">
+        <h2> Controle de Dieta </h2>
 
-    <div class="link">
-      <a href = "#"> Dashboard </a> |
-      <a href = "/accounts/login/"> Dieta </a>
+        <div class="link">
+          <a href = "#"> Dashboard </a> |
+          <a href = "#"> Dieta </a>
+        </div>
+      </header>
+      {% block main %}
+
+      {% endblock %}
     </div>
-  </header>
-   {% if user.is_authenticated %}
-        <h1> AUTENTICADO </h1>
-   {% else %}
-        <h1> NAO AUTENTICADO </h1>
-   {% endif %}
+  </div>
+
+
+
+
 
 </body>
 </html>
