@@ -7,14 +7,21 @@ from django.contrib.auth.decorators import login_required
 from .forms import DadosForm
 
 from django.db.models import Sum, Count
+from .models import Dados, Dieta
 
 # Create your views here.
 
 def controleDieta(request):
 
     form = DadosForm
+    if request.user.is_authenticated:
+       usuario = User.objects.get(id=request.user.id)
+       dados_gerais = Dados.objects.get(user=usuario)
+    else:
+        dados_gerais = ""
+
     dados ={
-        'forms': form
+        'Dados_gerais': dados_gerais
     }
     return render(request,'index.html', dados)
 
@@ -76,3 +83,23 @@ def gravaUsuarioNovo(request):
             user_add.save()
 
             return redirect('/accounts/login/');
+
+
+
+def gravaDados(request):
+
+    if request.method == 'POST':
+        usuario = User.objects.get(id=request.user.id)
+
+        dadosAdd = Dados();
+
+        dadosAdd.user = usuario
+        dadosAdd.dt_inicio = request.POST.get('data_inicio')
+        dadosAdd.dt_final  = request.POST.get('data_final')
+        dadosAdd.peso      = request.POST.get('peso_inicial')
+        dadosAdd.altura    = request.POST.get('altura_atual')
+        dadosAdd.peso_ideal= request.POST.get('peso_ideal')
+
+        dadosAdd.save()
+
+        return redirect('inicio');

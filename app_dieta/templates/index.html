@@ -1,26 +1,25 @@
 {% extends 'base.html' %}
 
 {% block main %}
+{% load static %}
 
     <!-- se o usuario não estiver autenticado, mostrara as opções de acessar
          sua conta, ou fazer um cadastro -->
     {% if user.is_authenticated %}
-      <div class="container-dados">
+
+    <form   class="form-cadastro"
+            action="{% url 'GravaDados'%}"
+            name = "cadastro"
+            method="POST">
+
+      {% csrf_token %}
+
+      <div class="col-sm-12" id="container-dados">
+
+        <h3 id="titulo-dados"> Dados Gerais </h3>
 
 
-
-        <h2 id="titulo-dados"> Dados Gerais </h2>
-        <!--
-        <form action=" " method="POST">
-            {{ forms.as_p }}
-
-        </form> -->
-
-        <form class="form-cadastro-dados"
-              action=""
-              name = "cadastro-dados"
-              method="POST">
-            {% csrf_token %}
+        <div class="cadastro-dados">
 
             <div class="fields-dados">
                 <div  class="linha1-dados" id = "data-inicio">
@@ -29,7 +28,7 @@
                         class="data_inicio"
                         name ="data_inicio"
                         type ="date"
-                        value= ""
+                        value= "{{Dados_gerais.dt_inicio}}"
                     >
                 </div>
 
@@ -39,17 +38,18 @@
                         class="data_final"
                         name ="data_final"
                         type ="date"
-                        value= ""
+                        value= "{{Dados_gerais.dt_final }}"
                     >
                 </div>
-
+{{ Dados_gerais.peso }}
                 <div  class="linha2-dados" id = "peso-inicial">
                     <label> Peso : </label>
                     <input id="peso_inicial"
                         class="peso_inicial"
                         name ="peso_inicial"
                         type ="number"
-                        value= ""
+                        step="0.01"
+                        value= "{{ Dados_gerais.peso }}"
                     >
                 </div>
 
@@ -59,7 +59,8 @@
                         class="altura_atual"
                         name ="altura_atual"
                         type ="number"
-                        value= ""
+                        step="0.01"
+                        value= "{{ Dados_gerais.altura }}"
                     >
                 </div>
 
@@ -68,25 +69,26 @@
                     <input id="peso_ideal"
                         class="peso_ideal"
                         name ="peso_ideal"
+                        resultado = "readonly"
                         type ="number"
-                        value= ""
+                        step="0.01"
+                        value= "{{ Dados_gerais.peso_ideal }}"
                     >
                 </div>
 
 
             </div>
 
-        </form>
+        </div>
+      </div>
 
+      <div class="col-sm-12" id="container-dieta">
+        <h3 id="titulo-dieta"> Dieta </h3>
+        <div class="cadastro-dieta">
 
-        <h2 id="titulo-dieta"> Dieta </h2>
-        <form class="form-cadastro-dieta"
-              action=""
-              name = "cadastro-dieta"
-              method="POST">
-            {% csrf_token %}
 
             <div class="fields-dieta">
+                <!--
                 <div  class="linha1-dieta" id = "tipo-dieta">
                     <label> Refeição : </label>
                     <input id="tipo_dieta"
@@ -96,7 +98,19 @@
                         value= ""
                     >
                 </div>
-
+                -->
+                <div  class="linha1-dieta" id = "tipo-dieta"> 
+                    
+                                    
+                        <label> Refeição : </label>
+                        <select id="tipo_dieta">
+                            <option value="valor1"> Café  </option> 
+                            <option value="valor2"> Almoço</option>
+                            <option value="valor3"> Janta </option>
+                        </select>
+                
+                   
+                </div>
                 <div  class="linha1-dieta" id = "horario-dieta">
                     <label> Horario : </label>
                     <input id="horario_dieta"
@@ -107,21 +121,29 @@
                     >
                 </div>
 
+
                 <div  class="linha2-dieta" id = "descricao-dieta">
                     <label> Descrição : </label>
-                    <input id="descricao_dieta"
-                        class="descricao_dieta"
-                        name ="descricao_dieta"
-                        type ="text"
-                        value= ""
-                    >
+                  
+                  
+                    <textarea  id="descricao_dieta" rows="2" cols="87">
+                        
+                    </textarea>
                 </div>
 
 
-            </div>
 
-        </form>
+
+            </div>
+           
+            <button id="botao-adicionar" type="submit" class="btn btn-success">
+                    Adicionar
+            </button>
+      
+
+        </div>
       </div>
+    </form>  
 
     {% else %}
 

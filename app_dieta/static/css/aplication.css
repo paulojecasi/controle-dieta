@@ -26,12 +26,12 @@ header h2{
 
 header .link{
     font-size: 19px;
-    padding: 30px 0px 0px 10px;
+    padding: 50px 0px 0px 10px;
 }
 
 header #ola-usuario{
     font-size: 19px;
-    padding: 0px 0px 0px 800px;
+    padding: 0px 0px 0px 750px;
 }
 
 #bt-acesso {
@@ -214,16 +214,16 @@ header #ola-usuario{
 
 /** --------------------- CADASTRO DE DADOS DA DIETA ------------------------**/
 
-.container-dados{
-    height: 100% ;                             /** altura do bloco **/
+        /** --- dados do cliente --- **/
+#container-dados{
     width: 100%;                                /** largura **/
-    padding-bottom: 40px;
+    padding-bottom: 30px;
+
 }
 
-.form-cadastro-dados{
+.cadastro-dados{
 
-
-    height: 190px ;                             /** altura do bloco **/
+    height: 150px ;                             /** altura do bloco **/
     width: 100%;                                /** largura **/
     margin-left: 0px;
 
@@ -248,19 +248,21 @@ header #ola-usuario{
 }
 
 #titulo-dados{
-    padding-left:50px;
+    padding: 10px 0px 0px 50px;  /*  acima    50px  padding  */
+                                /*  direita  0px  padding  */
+                                /*  abaixo   00px padding  */
+                                /*  esquerda 30px  padding  */
 }
-
 .fields-dados{
     font-family: Arial, sans-serif;
     font-size: 18px;
     color: black;
-    line-height:45px;                          /** espaço entre as linhas **/
+    line-height:35px;                          /** espaço entre as linhas **/
 
 
 }
 
-.fields-dados div input{
+.fields-dados div input, select{
     font-family: Arial, sans-serif;
     font-size: 17px;
     background-color: #fffccc;
@@ -271,23 +273,17 @@ header #ola-usuario{
 
 .linha1-dados{
     float: left;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .fields-dados div#data-inicio{
     padding-left:50px;                      /** espaço da borda e texto a esquerda **/
 
 }
-.fields-dados div input#data_inicio{
-    text-transform: none;
-}
 
 .fields-dados div#data-final{
     padding-left:400px;                      /** espaço da borda e texto a esquerda **/
 
-}
-.fields-dados div input#data_final{
-    text-transform: none;
 }
 
 
@@ -299,17 +295,13 @@ header #ola-usuario{
     padding-left:124px;                      /** espaço da borda e texto a esquerda **/
 
 }
-.fields-dados div input#peso-inicial{
-    text-transform: none;
-}
+
 
 .fields-dados div#altura-atual{
     padding-left:383px;                      /** espaço da borda e texto a esquerda **/
 
 }
-.fields-dados div input#altura-atual{
-    text-transform: none;
-}
+
 
 .linha3-dados{
     float: left;
@@ -319,17 +311,19 @@ header #ola-usuario{
     padding-left:78px;                      /** espaço da borda e texto a esquerda **/
 
 }
-.fields-dados div input#peso-ideal{
-    text-transform: none;
+
+    /** dados da dieta **/
+
+#container-dieta{
+    width: 100%;                                /** largura **/
+    padding-bottom: 30px;
+
 }
 
-
-.form-cadastro-dieta{
-
-
-    height: 190px ;                             /** altura do bloco **/
-    width: 80%;                                /** largura **/
-    margin-left: 30px;
+.cadastro-dieta{
+    height: 210px ;                             /** altura do bloco **/
+    width: 90%;                                /** largura **/
+    margin-left: 50px;
 
     font-size: 18px;                          /** tamanho da fonte **/
     font-weight: bold;                        /** fonte em negrito **/
@@ -350,7 +344,7 @@ header #ola-usuario{
 
 }
 
-fields-dieta{
+.fields-dieta{
     font-family: Arial, sans-serif;
     font-size: 18px;
     color: black;
@@ -374,36 +368,53 @@ fields-dieta{
 
 .linha1-dieta{
     float: left;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .fields-dieta div#tipo-dieta{
-    padding-left:78px;                      /** espaço da borda e texto a esquerda **/
+    padding-left:63px;                      /** espaço da borda e texto a esquerda **/
 
 }
-.fields-dieta div input#tipo_dieta{
-    text-transform: none;
+.fields-dieta div select#tipo_dieta{
+    position: relative;
+    margin-left: 10px;
+    width: 200px ;                 /* tamanho do campo */
 }
+
 
 .fields-dieta div#horario-dieta{
-    padding-left:400px;                      /** espaço da borda e texto a esquerda **/
+    padding-left:380px;                      /** espaço da borda e texto a esquerda **/
 
 }
 .fields-dieta div input#horario_dieta{
     text-transform: none;
+    width: 150px ;                 /* tamanho do campo */
 }
 
 .linha2-dieta{
     float: left;
+    margin-top: 0px;
 }
 
-.fields-dieta div#descricao-dieta{
-    padding-left:0px;                      /** espaço da borda e texto a esquerda **/
+.fields-dieta div#descricao-dieta label{
+    padding-left:60px;                      /** espaço da borda e texto a esquerda **/
 
 }
-.fields-dieta div input#descricao_dieta{
+.fields-dieta div #descricao_dieta textarea{
+    font-family: Arial, sans-serif;
+    font-size: 17px;
+    background-color: #fffccc;
     text-transform: none;
+
 }
+
+#botao-adicionar{
+    width: 130px ;                 /* lagura do botao*/
+    position: relative;
+    margin-top: 160px;
+    margin-left: 25px;
+}
+
 
 
 
