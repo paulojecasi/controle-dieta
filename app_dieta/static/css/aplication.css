@@ -107,7 +107,7 @@ header #ola-usuario{
     text-align: left;
 }
 
-.fields-suario{
+.fields-usuario{
     font-family: Arial, sans-serif;
     font-size: 18px;
     color: black;
@@ -116,7 +116,7 @@ header #ola-usuario{
 
 }
 
-.fields-suario div input{
+.fields-usuario div input{
     font-family: Arial, sans-serif;
     font-size: 17px;
     background-color: #fffccc;
@@ -125,42 +125,42 @@ header #ola-usuario{
     text-transform: uppercase;
 }
 
-.fields-suario div#email-us{
+.fields-usuario div#email-us{
     padding-left:90px;                      /** espaço da borda e texto a esquerda **/
 
 }
-.fields-suario div input#email{
+.fields-usuario div input#email{
     width:600px   ;                 /* tamanho do campo */
     text-transform: none;
 }
 
-.fields-suario div#senha-us{
+.fields-usuario div#senha-us{
     padding-left:84px;                      /** espaço da borda e texto a esquerda **/
     text-transform: none;
 }
-.fields-suario div input#senha{
+.fields-usuario div input#senha{
     width:200px   ;                 /* tamanho do campo */
     text-transform: none;
 }
 
-.fields-suario div#confsenha-us{
+.fields-usuario div#confsenha-us{
     padding-left:0px;                      /** espaço da borda e texto a esquerda **/
 }
-.fields-suario div input#confsenha{
+.fields-usuario div input#confsenha{
     width:200px   ;                 /* tamanho do campo */
     text-transform: none;
 }
-.fields-suario div#primeiro-nome{
+.fields-usuario div#primeiro-nome{
     padding-left:12px;                      /** espaço da borda e texto a esquerda **/
 }
-.fields-suario div input#primeiro_nome{
+.fields-usuario div input#primeiro_nome{
     width:300px  ;                  /* tamanho do campo */
 }
-.fields-suario div#sobre-nome{
+.fields-usuario div#sobre-nome{
     padding-left:34px;                      /** espaço da borda e texto a esquerda **/
 
 }
-.fields-suario div input#sobre_nome{
+.fields-usuario div input#sobre_nome{
     width:300px  ;                  /* tamanho do campo */
 }
 
@@ -210,6 +210,209 @@ header #ola-usuario{
     text-shadow: 2px 2px 2px white;
 
 }
+
+
+/** --------------------- CADASTRO DE DADOS DA DIETA ------------------------**/
+
+.container-dados{
+    height: 100% ;                             /** altura do bloco **/
+    width: 100%;                                /** largura **/
+    padding-bottom: 40px;
+}
+
+.form-cadastro-dados{
+
+
+    height: 190px ;                             /** altura do bloco **/
+    width: 100%;                                /** largura **/
+    margin-left: 0px;
+
+    font-size: 18px;                          /** tamanho da fonte **/
+    font-weight: bold;                        /** fonte em negrito **/
+    color: black;                            /** cor da fonte **/
+    text-decoration: none;
+    list-style: none;
+
+    padding: 0px 0px 0px 0px;  /*  acima    50px  padding  */
+                                /*  direita  0px  padding  */
+                                /*  abaixo   00px padding  */
+                                /*  esquerda 30px  padding  */
+
+    /** background: url(img/carrogrande.png) center no-repeat; **/
+    /** background: url(img/carrogrande.png) center; **/
+    background-size: 150px 150px;
+    border-top: 2px outset rgba(0,0,0);    /** borda e cor da borda **/
+    border-bottom: 2px outset rgba(0,0,0);    /** borda e cor da borda **/
+    border-radius: 0px 0px 0px 0px ;         /** arredondamento da borda **/
+
+}
+
+#titulo-dados{
+    padding-left:50px;
+}
+
+.fields-dados{
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    color: black;
+    line-height:45px;                          /** espaço entre as linhas **/
+
+
+}
+
+.fields-dados div input{
+    font-family: Arial, sans-serif;
+    font-size: 17px;
+    background-color: #fffccc;
+    box-shadow: 1px 1px 2px #333333;
+    height: 25px;                            /** altuta **/
+    text-transform: uppercase;
+}
+
+.linha1-dados{
+    float: left;
+    margin-top: 20px;
+}
+
+.fields-dados div#data-inicio{
+    padding-left:50px;                      /** espaço da borda e texto a esquerda **/
+
+}
+.fields-dados div input#data_inicio{
+    text-transform: none;
+}
+
+.fields-dados div#data-final{
+    padding-left:400px;                      /** espaço da borda e texto a esquerda **/
+
+}
+.fields-dados div input#data_final{
+    text-transform: none;
+}
+
+
+.linha2-dados{
+    float: left;
+}
+
+.fields-dados div#peso-inicial{
+    padding-left:124px;                      /** espaço da borda e texto a esquerda **/
+
+}
+.fields-dados div input#peso-inicial{
+    text-transform: none;
+}
+
+.fields-dados div#altura-atual{
+    padding-left:383px;                      /** espaço da borda e texto a esquerda **/
+
+}
+.fields-dados div input#altura-atual{
+    text-transform: none;
+}
+
+.linha3-dados{
+    float: left;
+}
+
+.fields-dados div#peso-ideal{
+    padding-left:78px;                      /** espaço da borda e texto a esquerda **/
+
+}
+.fields-dados div input#peso-ideal{
+    text-transform: none;
+}
+
+
+.form-cadastro-dieta{
+
+
+    height: 190px ;                             /** altura do bloco **/
+    width: 80%;                                /** largura **/
+    margin-left: 30px;
+
+    font-size: 18px;                          /** tamanho da fonte **/
+    font-weight: bold;                        /** fonte em negrito **/
+    color: black;                            /** cor da fonte **/
+    text-decoration: none;
+    list-style: none;
+
+    padding: 0px 0px 0px 0px;  /*  acima    50px  padding  */
+                                /*  direita  0px  padding  */
+                                /*  abaixo   00px padding  */
+                                /*  esquerda 30px  padding  */
+
+    /** background: url(img/carrogrande.png) center no-repeat; **/
+    /** background: url(img/carrogrande.png) center; **/
+    background-size: 150px 150px;
+    border: 2px outset rgba(0,0,0);    /** borda e cor da borda **/
+    border-radius: 0px 0px 0px 0px ;         /** arredondamento da borda **/
+
+}
+
+fields-dieta{
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    color: black;
+    line-height:45px;                          /** espaço entre as linhas **/
+
+
+}
+
+.fields-dieta div input{
+    font-family: Arial, sans-serif;
+    font-size: 17px;
+    background-color: #fffccc;
+    box-shadow: 1px 1px 2px #333333;
+    height: 25px;                            /** altuta **/
+    text-transform: uppercase;
+}
+
+#titulo-dieta{
+    padding-left:50px;
+}
+
+.linha1-dieta{
+    float: left;
+    margin-top: 20px;
+}
+
+.fields-dieta div#tipo-dieta{
+    padding-left:78px;                      /** espaço da borda e texto a esquerda **/
+
+}
+.fields-dieta div input#tipo_dieta{
+    text-transform: none;
+}
+
+.fields-dieta div#horario-dieta{
+    padding-left:400px;                      /** espaço da borda e texto a esquerda **/
+
+}
+.fields-dieta div input#horario_dieta{
+    text-transform: none;
+}
+
+.linha2-dieta{
+    float: left;
+}
+
+.fields-dieta div#descricao-dieta{
+    padding-left:0px;                      /** espaço da borda e texto a esquerda **/
+
+}
+.fields-dieta div input#descricao_dieta{
+    text-transform: none;
+}
+
+
+
+
+
+
+
+
+
 
 
 

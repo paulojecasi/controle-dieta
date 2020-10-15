@@ -1,0 +1,86 @@
+{% block content %}
+        <form class="form-cadastro-usuario"
+              action="{% url 'GravaUsuarioNovo' %}"
+              name = "cadastro-usuario"
+              method="POST">
+            {% csrf_token %}
+
+            <h2 id="cabecalho-cad-usuario"> Cadastro de usuário e senha</h2>
+
+
+            <div class="fields-suario">
+                <div id = "primeiro-nome">
+                    <label> Primeiro nome </label>
+                    <input id="primeiro_nome"
+                        class="primeiro_nome"
+                        name ="primeiro_nome"
+                        type ="text"
+                        {% if user.is_authenticated %}
+                            value= "{{user.first_name}}"
+                        {% else %}
+                            value= ""
+                        {% endif %}
+                    >
+                </div>
+                <div id = "sobre-nome">
+                    <label> Sobre nome </label>
+                    <input id="sobre_nome"
+                        class="sobre_nome"
+                        name ="sobre_nome"
+                        type ="text"
+                        {% if user.is_authenticated %}
+                            value= "{{user.last_name}}"
+                        {% else %}
+                            value= ""
+                        {% endif %}
+                    >
+                </div>
+
+                <div id = "email-us">
+                    <label> Email </label>
+                    <input id="email"
+                        class="email"
+                        name ="email"
+                        type ="email"
+                        {% if user.is_authenticated %}
+                            value= "{{user.email}}"
+                        {% else %}
+                           value= ""
+                        {% endif %}
+                    >
+                </div>
+
+                <div id = "senha-us">
+                    <label> Senha </label>
+                    <input id="senha"
+                        class="senha"
+                        name ="senha"
+                        type ="password"
+                        {% if user.is_authenticated %}
+                            value= "{{user.password}}"
+                        {% else %}
+                            value= ""
+                        {% endif %}
+                    >
+                </div>
+
+                <div id = "confsenha-us">
+                    <label> Confirme Senha </label>
+                    <input id="confsenha"
+                        class="confsenha"
+                        name ="confsenha"
+                        type ="password"
+                    {% if user.is_authenticated %}
+                        value= "{{user.password}}"
+                    {% else %}
+                        value= ""
+                    {% endif %}
+                    >
+                </div>
+
+
+
+            </div>
+
+        </form>
+ {% endblock %}

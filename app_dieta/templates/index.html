@@ -5,7 +5,124 @@
     <!-- se o usuario não estiver autenticado, mostrara as opções de acessar
          sua conta, ou fazer um cadastro -->
     {% if user.is_authenticated %}
-        <h1> AUTENTICADO </h1>
+      <div class="container-dados">
+
+
+
+        <h2 id="titulo-dados"> Dados Gerais </h2>
+        <!--
+        <form action=" " method="POST">
+            {{ forms.as_p }}
+
+        </form> -->
+
+        <form class="form-cadastro-dados"
+              action=""
+              name = "cadastro-dados"
+              method="POST">
+            {% csrf_token %}
+
+            <div class="fields-dados">
+                <div  class="linha1-dados" id = "data-inicio">
+                    <label> Data de Inicio : </label>
+                    <input id="data_inicio"
+                        class="data_inicio"
+                        name ="data_inicio"
+                        type ="date"
+                        value= ""
+                    >
+                </div>
+
+                <div  class="linha1-dados" id = "data-final">
+                    <label> Data Final : </label>
+                    <input id="data_final"
+                        class="data_final"
+                        name ="data_final"
+                        type ="date"
+                        value= ""
+                    >
+                </div>
+
+                <div  class="linha2-dados" id = "peso-inicial">
+                    <label> Peso : </label>
+                    <input id="peso_inicial"
+                        class="peso_inicial"
+                        name ="peso_inicial"
+                        type ="number"
+                        value= ""
+                    >
+                </div>
+
+                <div class="linha2-dados" id = "altura-atual" >
+                    <label> Altura : </label>
+                    <input id="altura_atual"
+                        class="altura_atual"
+                        name ="altura_atual"
+                        type ="number"
+                        value= ""
+                    >
+                </div>
+
+                <div  class="linha3-dados" id = "peso-ideal">
+                    <label> Peso Ideal : </label>
+                    <input id="peso_ideal"
+                        class="peso_ideal"
+                        name ="peso_ideal"
+                        type ="number"
+                        value= ""
+                    >
+                </div>
+
+
+            </div>
+
+        </form>
+
+
+        <h2 id="titulo-dieta"> Dieta </h2>
+        <form class="form-cadastro-dieta"
+              action=""
+              name = "cadastro-dieta"
+              method="POST">
+            {% csrf_token %}
+
+            <div class="fields-dieta">
+                <div  class="linha1-dieta" id = "tipo-dieta">
+                    <label> Refeição : </label>
+                    <input id="tipo_dieta"
+                        class="tipo_dieta"
+                        name ="tipo_dieta"
+                        type ="text"
+                        value= ""
+                    >
+                </div>
+
+                <div  class="linha1-dieta" id = "horario-dieta">
+                    <label> Horario : </label>
+                    <input id="horario_dieta"
+                        class="horario_dieta"
+                        name ="horario_dieta"
+                        type ="time"
+                        value= ""
+                    >
+                </div>
+
+                <div  class="linha2-dieta" id = "descricao-dieta">
+                    <label> Descrição : </label>
+                    <input id="descricao_dieta"
+                        class="descricao_dieta"
+                        name ="descricao_dieta"
+                        type ="text"
+                        value= ""
+                    >
+                </div>
+
+
+            </div>
+
+        </form>
+      </div>
+
     {% else %}
 
       <div id="bt-acesso" class = "col-sm-12" >

@@ -4,6 +4,7 @@ from datetime import datetime
 from django.http import HttpResponse
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
+from .forms import DadosForm
 
 from django.db.models import Sum, Count
 
@@ -11,7 +12,11 @@ from django.db.models import Sum, Count
 
 def controleDieta(request):
 
-    return render(request,'index.html')
+    form = DadosForm
+    dados ={
+        'forms': form
+    }
+    return render(request,'index.html', dados)
 
 
 def telaCadastroUsuario(request):  # aqui carregamos o form com os campos da tabela
