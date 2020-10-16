@@ -13,7 +13,7 @@ from .models import Dados, Dieta
 
 def controleDieta(request):
 
-    form = DadosForm
+
     if request.user.is_authenticated:
        usuario = User.objects.get(id=request.user.id)
 
