@@ -7,6 +7,7 @@
          sua conta, ou fazer um cadastro -->
   {% if user.is_authenticated %}
 
+  
     <form   class="form-cadastro"
             name = "cadastro"
             method="POST"
@@ -45,7 +46,7 @@
                         class="data_final"
                         name ="data_final"
                         type ="date"
-                        value= "{{Dados_gerais.dt_final }}"
+                        value= "{{Dados_gerais.dt_final}}"
                     >
                 </div>
 
@@ -172,15 +173,25 @@
         {% endif %}
     </div>
 
+
+    <button id="botao-salvar" type="button" class="btn btn-success">
+        Salvar
+    </button>
+
+
   {% else %}
 
-      <div id="bt-acesso" class = "col-sm-12" >
-        <a id="bt-minha-conta" href="/accounts/login/">
-            Acessar minha conta
-        </a>
-        <a id="bt-sem-cadastro" href="{% url 'TelaCadastroUsuario' %}">
-            Nao tenho cadastro
-        </a>
+      <div id="acesso-conta" class = "col-sm-12" >
+        <div id ="botoes-acesso">
+            <a id="bt-minha-conta" href="/accounts/login/">
+                Acessar minha conta
+            </a>
+            <a id="bt-sem-cadastro" href="{% url 'TelaCadastroUsuario' %}">
+                Nao tenho cadastro
+            </a>
+
+        </div>
+
       </div>
 
   {% endif %}

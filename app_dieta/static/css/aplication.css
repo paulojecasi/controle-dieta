@@ -10,7 +10,7 @@ body {
 header{
     width: 100%;
     background-color:#87CEFA;                     /** cor de fundo **/
-    height: 130px;
+    height: 120px;
     font-size: 16px;
     display: flex;
     flex-direction: column;
@@ -34,39 +34,40 @@ header #ola-usuario{
     padding: 0px 0px 0px 750px;
 }
 
-#bt-acesso {
+#acesso-conta {
     width: 100%;
     height: 300px;
     font-size: 22px;
     /**padding: 60px 0px 0px 300px; **/
 
-    justify-content: center;
+}
 
+#acesso-conta div#botoes-acesso {
+    width: 550px;
+    position: relative;
+    margin: auto;
+    margin-top: 80px;
 
 }
 
-#bt-acesso #bt-minha-conta {
+#acesso-conta #bt-minha-conta {
     background-color: #00BFFF;
     border: none;
     color: white;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
     margin: 4px 2px;
-    cursor: pointer;
 }
 
-#bt-acesso #bt-sem-cadastro {
+#acesso-conta #bt-sem-cadastro {
     background-color: #4682B4;
     border: none;
     color: white;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
     margin: 4px 2px;
-    cursor: pointer;
 }
 
 
@@ -94,17 +95,18 @@ header #ola-usuario{
     /** background: url(img/carrogrande.png) center no-repeat; **/
     /** background: url(img/carrogrande.png) center; **/
     background-size: 150px 150px;
-    background-color: #C0C0C0;                     /** cor de fundo **/
     border-radius: 0px 0px 0px 0px ;         /** arredondamento da borda **/
 
 }
 
 .form-cadastro-usuario h2#cabecalho-cad-usuario{
     font-family: Arial, sans-serif;
-    font-size: 33px;
-    color: rgba(255,255,255);
-    text-shadow: 2px 2px 2px rgba(0,0,0,.6);
-    text-align: left;
+    font-size: 30px;
+    text-align: center;
+    padding: 10px 0px 0px 0px;  /*  acima    50px  padding  */
+                                /*  direita  0px  padding  */
+                                /*  abaixo   00px padding  */
+                                /*  esquerda 30px  padding  */
 }
 
 .fields-usuario{
@@ -198,18 +200,7 @@ header #ola-usuario{
 
 }
 
-.form-cadastro-usuario a#ir-cadastro-cliente {
 
-    position:absolute;
-    right: 200px;
-    bottom: 100px;
-
-
-    color: blue;
-    font: bold 21px/25px arial, helvetica, sans-aerif;
-    text-shadow: 2px 2px 2px white;
-
-}
 
 
 /** --------------------- CADASTRO DE DADOS DA DIETA ------------------------**/
@@ -342,6 +333,8 @@ header #ola-usuario{
     border: 2px outset rgba(0,0,0);    /** borda e cor da borda **/
     border-radius: 0px 0px 0px 0px ;         /** arredondamento da borda **/
 
+    background-color: green;
+
 }
 
 .fields-dieta{
@@ -411,8 +404,12 @@ header #ola-usuario{
 #botao-adicionar{
     width: 130px ;                 /* lagura do botao*/
     position: relative;
+    margin: auto;
     margin-top: 160px;
-    margin-left: 25px;
+
+
+
+
 }
 
 
@@ -423,6 +420,13 @@ header #ola-usuario{
     border: 1px outset rgba(0,0,0);    /** borda e cor da borda **/
     border-radius: 0px 0px 0px 0px ;         /** arredondamento da borda **/
 
+}
+
+#botao-gravar{
+    width: 130px ;                 /* lagura do botao*/
+    position: relative;
+    margin-top: 160px;
+    margin-left: 25px;
 }
 
 

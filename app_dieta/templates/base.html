@@ -22,7 +22,7 @@
         {% if user.is_authenticated %}
             <div class="link">
               <a href = "#"> Dashboard </a> |
-              <a href = "#"> Dieta </a>
+              <a href = "{% url 'inicio' %}"> Dieta </a>
 
               <a id="ola-usuario" href="{% url 'TelaCadastroUsuario' %}">
                     Olá,  {{ user.first_name }}  {{ user.last_name }}!
@@ -32,7 +32,10 @@
                     Sair da conta
               </a>
             </div>
-
+        {% else %}
+            <div class="link">
+              <a href = "{% url 'inicio' %}"> Inicio </a>
+            </div>
 
         {% endif %}
 
@@ -40,10 +43,8 @@
       {% block main %}
 
       {% endblock %}
-      
-      <button id="botao-adicionar" type="button" class="btn btn-success">
-          Salvar
-      </button>
+
+
     </div>
   </div>
 
