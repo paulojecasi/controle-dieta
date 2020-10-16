@@ -17,21 +17,20 @@ class Dados(models.Model):
 
 
 class Dieta(models.Model):
-    REFEICAO = (
-        ('CAFE DA MANHA', 'CAFE DA MANHA'),
-        ('LANCHE       ', 'LANCHE       '),
-        ('ALMOÇO       ', 'ALMOÇO       '),
-        ('JANTAR       ', 'JANTAR       '),
-        ('CEIA         ', 'CEIA         ')
-
-    )
+   # REFEICAO = (
+   #     ('CAFE DA MANHA', 'CAFE DA MANHA'),
+   #     ('LANCHE       ', 'LANCHE       '),
+   #     ('ALMOÇO       ', 'ALMOÇO       '),
+   #     ('JANTAR       ', 'JANTAR       '),
+   #     ('CEIA         ', 'CEIA         ')
+   #
+   #)
 
     dados= models.ForeignKey(Dados, related_name='dieta',
                                 on_delete=models.CASCADE,
                                 null=True)
 
-    refeicao = models.CharField(max_length=30, verbose_name='Refeição',
-                blank=True, null=True, choices=REFEICAO)
+    refeicao = models.CharField(max_length=40, verbose_name='Refeição',blank=True, null=True)
     horario = models.TimeField(auto_now=False, auto_now_add=False,
                                  verbose_name='Horario')
     descricao = models.CharField(max_length=300, blank=True, null=True,

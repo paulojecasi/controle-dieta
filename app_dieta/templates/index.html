@@ -5,12 +5,19 @@
 
     <!-- se o usuario não estiver autenticado, mostrara as opções de acessar
          sua conta, ou fazer um cadastro -->
-    {% if user.is_authenticated %}
+  {% if user.is_authenticated %}
 
     <form   class="form-cadastro"
-            action="{% url 'GravaDados'%}"
             name = "cadastro"
-            method="POST">
+            method="POST"
+
+            {% if Dados_gerais %}
+                action="{% url 'GravaDadosDieta' Dados_gerais.id %}"
+            {% else %}
+                action="{% url 'GravaDados'%}"
+            {% endif %}
+
+    >
 
       {% csrf_token %}
 
@@ -41,7 +48,7 @@
                         value= "{{Dados_gerais.dt_final }}"
                     >
                 </div>
-{{ Dados_gerais.peso }}
+
                 <div  class="linha2-dados" id = "peso-inicial">
                     <label> Peso : </label>
                     <input id="peso_inicial"
@@ -103,10 +110,12 @@
                     
                                     
                         <label> Refeição : </label>
-                        <select id="tipo_dieta">
-                            <option value="valor1"> Café  </option> 
-                            <option value="valor2"> Almoço</option>
-                            <option value="valor3"> Janta </option>
+                        <select id="tipo_dieta" name="tipo_dieta">
+                            <option value="CAFE DA MANHA"> CAFE DA MANHA  </option>
+                            <option value="LANCHE       "> LANCHE </option>
+                            <option value="ALMOÇO"       > ALMOÇO </option>
+                            <option value="JANTAR"       > JANTAR </option>
+                            <option value="CEIA"         > CEIA   </option>
                         </select>
                 
                    
@@ -125,9 +134,10 @@
                 <div  class="linha2-dieta" id = "descricao-dieta">
                     <label> Descrição : </label>
                   
-                  
-                    <textarea  id="descricao_dieta" rows="2" cols="87">
-                        
+                    <textarea id="descricao_dieta"
+                              name="descricao_dieta"
+                              value = ""
+                              rows="2" cols="87">
                     </textarea>
                 </div>
 
@@ -143,9 +153,26 @@
 
         </div>
       </div>
-    </form>  
 
-    {% else %}
+    </form>
+
+
+    <div class="col-sm-12">
+        {% if Dados_dieta %}
+
+            <div id="mostra-planejamento">
+                {% for d in Dados_dieta %}
+
+                    <p> <h5> {{d.refeicao}}: {{d.horario}} h </h5>  </p>
+                    <p> Opcao    :  {{d.descricao }} </p>
+
+
+                {% endfor %}
+            </div>
+        {% endif %}
+    </div>
+
+  {% else %}
 
       <div id="bt-acesso" class = "col-sm-12" >
         <a id="bt-minha-conta" href="/accounts/login/">
@@ -156,7 +183,7 @@
         </a>
       </div>
 
-    {% endif %}
+  {% endif %}
 
 
 

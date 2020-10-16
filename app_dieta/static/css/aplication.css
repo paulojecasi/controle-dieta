@@ -217,7 +217,7 @@ header #ola-usuario{
         /** --- dados do cliente --- **/
 #container-dados{
     width: 100%;                                /** largura **/
-    padding-bottom: 30px;
+    padding-bottom: 10px;
 
 }
 
@@ -316,7 +316,7 @@ header #ola-usuario{
 
 #container-dieta{
     width: 100%;                                /** largura **/
-    padding-bottom: 30px;
+    padding-bottom: 20px;
 
 }
 
@@ -416,6 +416,14 @@ header #ola-usuario{
 }
 
 
+#mostra-planejamento{
+    width: 100%;                                /** largura **/
+    background-color: #D3D3D3;
+    padding-bottom: 10px;
+    border: 1px outset rgba(0,0,0);    /** borda e cor da borda **/
+    border-radius: 0px 0px 0px 0px ;         /** arredondamento da borda **/
+
+}
 
 
 
